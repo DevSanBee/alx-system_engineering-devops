@@ -1,1 +1,1 @@
-this is the shell navigation repo
+display content list of your current dir
