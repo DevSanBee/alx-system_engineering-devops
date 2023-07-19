@@ -1,3 +1,11 @@
-#!/usr/bin/env bash
-# Runs the command whoami as another user
-sudo -u "$1" whoami
+#!/bin/bash
+
+# Check if an argument is provided
+if [ $# -ne 1 ]; then
+  echo "Usage: $0 <username>"
+  exit 1
+fi
+# Assign the username from the argument
+username=$1
+# Run the whoami command under the provided user
+sudo -u "$username" whoami
