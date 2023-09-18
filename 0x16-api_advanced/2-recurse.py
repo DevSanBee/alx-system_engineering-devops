@@ -42,6 +42,5 @@ def recurse(subreddit, hot_list=[], after=''):
 
         # Get the next page of hot posts
         if after is not None:
-            return recurse(subreddit, hot_list, after)  # Return the result of the recursive call
-
+            recurse(subreddit, hot_list, after)
     return hot_list
